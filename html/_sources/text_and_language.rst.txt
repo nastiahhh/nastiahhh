@@ -1,0 +1,7 @@
+text\_and\_language module
+==========================
+
+.. automodule:: text_and_language
+   :members:
+   :undoc-members:
+   :show-inheritance:

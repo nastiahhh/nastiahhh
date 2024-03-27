@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>text_and_language module &#8212; Bloknot 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-text_and_language">
+<span id="text-and-language-module"></span><h1>text_and_language module<a class="headerlink" href="#module-text_and_language" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="text_and_language.SpellChecker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">text_and_language.</span></span><span class="sig-name descname"><span class="pre">SpellChecker</span></span><a class="reference internal" href="_modules/text_and_language.html#SpellChecker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.SpellChecker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для проверки орфографии текста.</p>
+<p>Атрибуты:
+supported_languages (list): Список поддерживаемых языков.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="text_and_language.SpellChecker.check_spelling">
+<span class="sig-name descname"><span class="pre">check_spelling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/text_and_language.html#SpellChecker.check_spelling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.SpellChecker.check_spelling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Метод для проверки орфографии для выбранного языка.</p>
+<p>Args:
+text (str): Текст для проверки.
+language (str): Язык текста.</p>
+<p>Returns:
+bool: Результат проверки орфографии (True - ошибок нет, False - обнаружены ошибки).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="text_and_language.SyntaxHighlighter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">text_and_language.</span></span><span class="sig-name descname"><span class="pre">SyntaxHighlighter</span></span><a class="reference internal" href="_modules/text_and_language.html#SyntaxHighlighter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.SyntaxHighlighter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для синтаксической подсветки кода.</p>
+<p>Атрибуты:
+supported_languages (list): Список поддерживаемых языков программирования.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="text_and_language.SyntaxHighlighter.highlight_syntax">
+<span class="sig-name descname"><span class="pre">highlight_syntax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/text_and_language.html#SyntaxHighlighter.highlight_syntax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.SyntaxHighlighter.highlight_syntax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Метод для подсветки синтаксиса для выбранного языка.</p>
+<p>Args:
+code (str): Код для подсветки.
+language (str): Язык программирования.</p>
+<p>Returns:
+str: Подсвеченный код.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="text_and_language.TextEditor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">text_and_language.</span></span><span class="sig-name descname"><span class="pre">TextEditor</span></span><a class="reference internal" href="_modules/text_and_language.html#TextEditor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.TextEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для редактирования текста.</p>
+<p>Атрибуты:
+font (str): Шрифт текста.
+font_size (int): Размер шрифта.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="text_and_language.TextEditor.change_font">
+<span class="sig-name descname"><span class="pre">change_font</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">font</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/text_and_language.html#TextEditor.change_font"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.TextEditor.change_font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Метод для изменения шрифта текста.</p>
+<p>Args:
+font (str): Новый шрифт текста.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="text_and_language.TextEditor.change_font_size">
+<span class="sig-name descname"><span class="pre">change_font_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/text_and_language.html#TextEditor.change_font_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#text_and_language.TextEditor.change_font_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Метод для изменения размера шрифта текста.</p>
+<p>Args:
+size (int): Новый размер шрифта текста.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Bloknot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Anastasiya Bodnarchuk.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/text_and_language.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

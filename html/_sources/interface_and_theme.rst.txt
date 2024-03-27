@@ -1,0 +1,7 @@
+interface\_and\_theme module
+============================
+
+.. automodule:: interface_and_theme
+   :members:
+   :undoc-members:
+   :show-inheritance:

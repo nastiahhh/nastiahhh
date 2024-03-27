@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>files_and_documentation &#8212; Bloknot 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=039e1c02" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=359c27e9"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for files_and_documentation</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Модуль для работы с файлами</span>
+
+<div class="viewcode-block" id="save_file"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.save_file">[docs]</a><span class="k">def</span> <span class="nf">save_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Функция для сохранения файла.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    filename (str): Имя файла.</span>
+<span class="sd">    content (str): Содержимое файла.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Сохранение файла</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="open_file"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.open_file">[docs]</a><span class="k">def</span> <span class="nf">open_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Функция для открытия файла.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    filename (str): Имя файла.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: Содержимое файла.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Открытие файла</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">content</span></div>
+
+<span class="c1"># Модуль для управления вкладками</span>
+<div class="viewcode-block" id="TabManager"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.TabManager">[docs]</a><span class="k">class</span> <span class="nc">TabManager</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Класс для управления вкладками.</span>
+
+<span class="sd">    Атрибуты:</span>
+<span class="sd">    tabs (list): Список открытых вкладок.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="TabManager.add_tab"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.TabManager.add_tab">[docs]</a>    <span class="k">def</span> <span class="nf">add_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Метод для добавления новой вкладки.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">        tab (str): Название новой вкладки.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TabManager.switch_tab"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.TabManager.switch_tab">[docs]</a>    <span class="k">def</span> <span class="nf">switch_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Метод для переключения на выбранную вкладку.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">        index (int): Индекс вкладки для переключения.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TabManager.close_tab"><a class="viewcode-back" href="../files_and_documentation.html#files_and_documentation.TabManager.close_tab">[docs]</a>    <span class="k">def</span> <span class="nf">close_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Метод для закрытия выбранной вкладки.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">        index (int): Индекс вкладки для закрытия.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Bloknot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Anastasiya Bodnarchuk.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

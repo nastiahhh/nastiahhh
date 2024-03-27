@@ -1,0 +1,7 @@
+files\_and\_documentation module
+================================
+
+.. automodule:: files_and_documentation
+   :members:
+   :undoc-members:
+   :show-inheritance:
